@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Гра — Вікторія</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="../styles/variables.css" rel="stylesheet"/>
+<link href="../styles/reset.css" rel="stylesheet"/>
+<link href="../styles/base.css" rel="stylesheet"/>
+<link href="../styles/animations.css" rel="stylesheet"/>
+<link href="../styles/game.css" rel="stylesheet"/>
+<link href="../styles/photo-fix.css" rel="stylesheet"/>
+<link href="../styles/premium-enhancements.css" rel="stylesheet"/>
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/><meta content="Гра — Вікторія — інтерактивна сторінка привітання для Віки." name="description"/><meta content="website" property="og:type"/><meta content="Гра — Вікторія" property="og:title"/><meta content="Інтерактивне привітання для Віки." property="og:description"/><meta content="../og-image.jpg" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Гра — Вікторія" name="twitter:title"/><meta content="Інтерактивне привітання для Віки." name="twitter:description"/><meta content="../og-image.jpg" name="twitter:image"/></head>
+<body>
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+<div id="page-overlay" style="position:fixed;inset:0;background:var(--black);z-index:999;pointer-events:none;"></div>
+<nav class="site-nav" id="siteNav">
+<a class="nav-logo" href="../index.html">Вік<span>а</span></a>
+<div class="nav-links">
+<a class="nav-link" href="childhood.html">Дитинство</a>
+<a class="nav-link" href="odessa.html">Одеса</a>
+<a class="nav-link" href="bali.html">Балі</a>
+<a class="nav-link" href="valencia.html">Валенсія</a>
+<a class="nav-link" href="floki.html">Флокі</a>
+<a class="nav-link active" href="game.html">Гра</a>
+<a class="nav-link btn btn-primary" href="finale.html" style="padding:10px 20px">Послання 🖤</a>
+</div>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Відкрити меню" class="nav-burger" id="navBurger" type="button"><span></span><span></span><span></span></button>
+</nav>
+<div aria-hidden="true" class="mobile-menu" id="mobileMenu">
+<a class="nav-link" href="../index.html">Головна</a>
+<a class="nav-link" href="childhood.html">Дитинство</a>
+<a class="nav-link" href="odessa.html">Одеса</a>
+<a class="nav-link" href="bali.html">Балі</a>
+<a class="nav-link" href="valencia.html">Валенсія</a>
+<a class="nav-link" href="floki.html">Флокі</a>
+<a class="nav-link" href="game.html">Гра</a>
+<a class="nav-link" href="finale.html">Послання 🖤</a>
+</div>
+<!-- GAME HERO -->
+<section class="game-hero">
+<div class="game-hero-content">
+<div class="t-label-rose" style="margin-bottom:var(--space-lg)">Інтерактив</div>
+<h1 class="game-hero-title t-display">
+        Наскільки добре<br/>
+        ти знаєш <em>Віку?</em>
+</h1>
+<p class="t-body" style="max-width:480px;margin-top:var(--space-xl)">
+        Пройди два захопливих випробування — і дізнайся свій секретний фінальний титул! 
+		<br/>Почнімо з підступної вікторини.
+      </p>
+</div>
+<div class="game-hero-deco">
+<div class="game-deco-circle">
+<span class="t-display" style="font-size:clamp(60px,12vw,120px);color:var(--rose)">?</span>
+</div>
+</div>
+</section>
+<!-- ======================================
+       ГРА А — ВИКТОРИНА
+  ======================================= -->
+<section class="quiz-section" id="quizSection">
+<div class="quiz-inner">
+<div class="quiz-header">
+<div class="t-label-rose">Випробування перше</div>
+<h2 class="quiz-title t-display">Це Віка?</h2>
+<p class="t-body quiz-subtitle">Зможеш відповісти правильно?</p>
+</div>
+<!-- Прогресс -->
+<div class="quiz-progress" id="quizProgress">
+<div class="quiz-progress-bar">
+<div class="quiz-progress-fill" id="progressFill"></div>
+</div>
+<span class="quiz-progress-text t-label" id="progressText">1 / 13</span>
+</div>
+<!-- Карточка вопроса -->
+<div class="quiz-card" id="quizCard">
+<div class="quiz-question" id="quizQuestion">
+          Віка дісталася до колонки на вечірці. Що вона увімкнула?
+        </div>
+<div class="quiz-options" id="quizOptions">
+<!-- Генерируется через JS -->
+</div>
+</div>
+<!-- Результат -->
+<div class="quiz-result hidden" id="quizResult">
+<div class="quiz-result-score t-display" id="resultScore"></div>
+<div class="quiz-result-title" id="resultTitle"></div>
+<div class="quiz-result-desc t-body" id="resultDesc"></div>
+<button class="btn btn-primary quiz-restart" id="quizRestart" type="button">
+          Зіграти ще раз
+        </button>
+</div>
+</div>
+</section>
+<!-- РАЗДЕЛИТЕЛЬ -->
+<div class="game-divider">
+<div class="game-divider-inner">
+<div class="divider-rose" style="width:60px;margin:0 auto var(--space-xl)"></div>
+<p class="t-label" style="text-align:center;color:var(--grey-mid)">Випробування друге</p>
+</div>
+</div>
+<!-- ======================================
+       ГРА Б — ФЛОКИ БЕЖИТ К КОЛОНКЕ
+  ======================================= -->
+<section class="runner-section" id="runnerSection">
+<div class="runner-inner">
+<div class="runner-header">
+<div class="t-label-rose">Врятуй вечірку</div>
+<h2 class="runner-title t-display">
+          Допоможи Флокі<br/>
+<em>зібрати букет</em>
+</h2>
+<p class="t-body runner-subtitle">
+<!--  Флокі несёт цветы Вике. На пути — люди,
+          которые пытаются его остановить. Нажимай або тапай чтобы прыгать. -->
+</p>
+</div>
+<div class="runner-game-wrap">
+<canvas class="runner-canvas" id="runnerCanvas"></canvas>
+<div class="runner-overlay" id="runnerOverlay">
+<div class="runner-overlay-content">
+<div class="runner-icon">🐾</div>
+<div class="runner-overlay-title t-display" id="runnerTitle">Флокі готовий</div>
+<div class="runner-overlay-desc t-body" id="runnerDesc">
+              Допоможи йому зібрати квіти. Тисни, щоб стрибати.
+            </div>
+<button class="btn btn-primary" id="runnerStart" type="button">Почати!</button>
+</div>
+</div>
+<div class="runner-score-wrap">
+<span class="t-label">Бали:</span>
+<span class="runner-score t-display" id="runnerScore" style="font-size:var(--text-2xl)">0</span>
+</div>
+</div>
+<div class="runner-controls">
+<span class="runner-hint">
+<span class="runner-hint-key">Пробіл</span> або
+          <span class="runner-hint-key">↑</span> — стрибок
+        </span>
+<span class="runner-hint">
+<span class="runner-hint-key">Тап</span> — на телефоні
+        </span>
+<span class="runner-hint">
+</span>
+</div>
+</div>
+</section>
+<!-- ПЕРЕХОД -->
+<section class="ch-next-chapter">
+<div class="ch-next-inner">
+<div class="ch-next-label t-label-rose reveal">Фінальна зупинка</div>
+<h2 class="ch-next-title t-display reveal delay-1">
+        Наше послання.<br/><em>Найважливіше.</em>
+</h2>
+<a class="btn btn-primary reveal delay-2" href="finale.html">
+        Читати
+        <svg fill="none" height="16" viewbox="0 0 16 16" width="16">
+<path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+</div>
+</section>
+<footer class="site-footer">
+<div class="footer-inner">
+<!--  <div class="footer-logo">Вік<span>а</span></div> -->
+<div class="footer-date">22 · 06 · 2026</div>
+<div class="footer-heart">made with 🖤 by Максим &amp; Люба</div>
+</div>
+</footer>
+<script src="../scripts/app.js"></script>
+<script src="../scripts/game.js"></script>
+<script src="../scripts/premium-enhancements.js"></script>
+</body>
+</html>

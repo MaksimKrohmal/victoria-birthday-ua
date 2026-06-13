@@ -1,0 +1,253 @@
+/* ============================================
+   PHOTO-FIX.CSS
+   Точечные настройки position для каждого фото.
+
+   КАК МЕНЯТЬ ПОЛОЖЕНИЕ КОНКРЕТНОГО ФОТО:
+   Найди нужный селектор ниже и измени значение.
+
+   Варианты значений:
+   top center    — показывает верх (лицо, голова)
+   center center — показывает середину
+   bottom center — показывает низ
+   center 20%    — чуть ниже верха
+   center 30%    — треть сверху
+   center 40%    — почти середина
+   ============================================ */
+
+
+/* ============================================
+   INDEX.HTML — ГЛАВНАЯ СТРАНИЦА
+   ============================================ */
+
+/* Фоновый слайдер — hero-main.jpg */
+.hero-bg-photo:nth-child(1) img { object-position: center 50%; }
+
+/* Фоновый слайдер — wedding-main.jpg */
+.hero-bg-photo:nth-child(2) img { object-position: top center; }
+
+/* Фоновый слайдер — bali-hero.jpg */
+.hero-bg-photo:nth-child(3) img { object-position: center 40%; }
+
+/* Стопка фото справа — hero-main.jpg (Валенсия, машет рукой) */
+.hero-photo-1 img { object-position: center center; }
+
+/* Стопка фото справа — wedding-main.jpg (невеста) */
+.hero-photo-2 img { object-position: top center; }
+
+/* Стопка фото справа — floki-1.jpg (Флоки с нарциссами) */
+.hero-photo-3 img { object-position: center 25%; }
+
+/* Карточки городов — odessa-1.jpg (венок из маков) */
+.path-city:nth-child(1) .path-city-photo img { object-position: center 35%; }
+
+/* Карточки городов — bali-hero.jpg (вулкан, джип) */
+.path-city:nth-child(2) .path-city-photo img { object-position: center 70%; }
+
+/* Карточки городов — hero-main.jpg (Валенсия) */
+.path-city:nth-child(3) .path-city-photo img { object-position: center center; }
+
+/* Фото-полоса внизу — family-1.jpg */
+.final-cta-photo-strip .strip-item:nth-child(1) img { object-position: top center; }
+
+/* Фото-полоса внизу — floki-1.jpg */
+.final-cta-photo-strip .strip-item:nth-child(2) img { object-position: center center; }
+
+/* Фото-полоса внизу — bali-hero.jpg */
+.final-cta-photo-strip .strip-item:nth-child(3) img { object-position: center 35%; }
+
+/* Фото-полоса внизу — wedding-kiss.jpg */
+.final-cta-photo-strip .strip-item:nth-child(4) img { object-position: top center; }
+
+/* Фото-полоса внизу — odessa-1.jpg */
+.final-cta-photo-strip .strip-item:nth-child(5) img { object-position: top center; }
+
+
+/* ============================================
+   CHILDHOOD.HTML — ДЕТСТВО
+   ============================================ */
+
+/* Фон hero — child-1.jpg (малышка в шубе) */
+.ch-hero-bg img { object-position: center 10%; }
+
+/* Большое фото секции — child-2.jpg (восточный костюм) */
+.ch-photo-main img { object-position: center 30%; }
+
+/* Маленькое фото рядом — child-1.jpg (малышка) */
+.ch-photo-side img { object-position: top center; }
+
+/* История 01 — фото child-3.jpg (зоопарк, медведь) */
+.ch-story-gypsies .ch-story-photo img { object-position: center 50%; }
+
+/* История 02 — stylist.jpg (ч/б, делает причёску) */
+.ch-story-haircut .ch-story-photo img { object-position: top center; }
+
+/* Галерея — child-1.jpg (малышка в шубе) */
+.ch-gallery-item:nth-child(1) img { object-position: top center; }
+
+/* Галерея — child-2.jpg (Принцксса) */
+.ch-gallery-item:nth-child(2) img { object-position: center 20%; }
+
+/* Галерея — child-3.jpg (белый бант) */
+.ch-gallery-item:nth-child(3) img { object-position: center 30%; }
+
+/* Галерея — siblings-zoo.jpg (Вика и Максим со страусом) */
+.ch-gallery-item:nth-child(4) img { object-position: center 40%; }
+
+/* Галерея — child-4.jpg (школьная форма) */
+.ch-gallery-item:nth-child(5) img { object-position: center 40%; }
+
+/* Галерея — child-school.jpg (первый класс) */
+.ch-gallery-item:nth-child(6) img { object-position: top center; }
+
+/* Большое фото мопеда — siblings-moped.jpg */
+.ch-moped-photo img { object-position: top center; }
+
+
+/* ============================================
+   ODESSA.HTML — ОДЕССА
+   ============================================ */
+
+/* Фон hero — odessa-1.jpg (венок из маков) */
+.city-hero-bg img { object-position: center 20%; }
+
+/* Галерея — odessa-1.jpg высокое (венок из маков) */
+.city-masonry .city-photo:nth-child(1) img { object-position: top center; }
+
+/* Галерея — odessa-2.jpg (танцпол, тост) */
+.city-masonry .city-photo:nth-child(2) img { object-position: top center; }
+
+/* Галерея — odessa-3.jpg (полный отрыв) */
+.city-masonry .city-photo:nth-child(3) img { object-position: center 50% !important; }
+
+/* Галерея — odessa-toast.jpg (произносит речь) */
+.city-masonry .city-photo:nth-child(4) img { object-position: top center; }
+
+
+/* ============================================
+   BALI.HTML — БАЛИ
+   ============================================ */
+
+/* Фон hero — bali-hero.jpg (вулкан Бромо) */
+/* .city-hero-bg img уже задан выше — переопределяем для Бали */
+.bali-hero-section .city-hero-bg img { object-position: center 35%; }
+
+/* Полоса пейзажей — bali-landscape-1.jpg (рисовые поля) */
+.bali-landscapes-strip .bali-land:nth-child(1) img { object-position: center center; }
+
+/* Полоса пейзажей — bali-landscape-2.jpg (пальма, серое небо) */
+.bali-landscapes-strip .bali-land:nth-child(2) img { object-position: center 30%; }
+
+/* Полоса пейзажей — bali-waterfall.jpg (водопад) */
+.bali-landscapes-strip .bali-land:nth-child(3) img { object-position: center center; }
+
+/* Полоса пейзажей — bali-garden.jpg (тропический сад) */
+.bali-landscapes-strip .bali-land:nth-child(4) img { object-position: center 40%; }
+
+/* Галерея Вики — bali-2.jpg высокое (плюмерия в волосах) */
+.city-gallery-section .city-masonry .city-photo:nth-child(1) img { object-position: top center; }
+
+/* Галерея Вики — bali-3.jpg (статуя Гаруды) */
+.city-gallery-section .city-masonry .city-photo:nth-child(2) img { object-position: center 30% !important; }
+
+/* Галерея Вики — bali-hero.jpg (вулкан, джип) */
+.city-gallery-section .city-masonry .city-photo:nth-child(3) img { object-position: center 40% !important; }
+
+/* Галерея Вики — bali-night-dinner.jpg (ужин под пальмами) */
+.city-gallery-section .city-masonry .city-photo:nth-child(4) img { object-position: top center; }
+
+/* Свадьба — wedding-main.jpg (большое фото невесты) */
+.bali-wedding-main img { object-position: top center; }
+
+/* Свадьба маленькие — wedding-kiss.jpg */
+.bali-wedding-grid .bali-wed-small:nth-child(1) img { object-position: top center; }
+
+/* Свадьба маленькие — wedding-couple.jpg (оба в очках) */
+.bali-wedding-grid .bali-wed-small:nth-child(2) img { object-position: top center; }
+
+/* Свадьба маленькие — wedding-2.jpg (идёт к алтарю) */
+.bali-wedding-grid .bali-wed-small:nth-child(3) img { object-position: top center; }
+
+/* Свадьба маленькие — wedding-lyuba.jpg (Вика и Люба ночью) */
+.bali-wedding-grid .bali-wed-small:nth-child(4) img { object-position: top center; }
+
+/* Полноэкранное — wedding-3.jpg (ч/б сквозь фату) */
+.bali-fs-photo img { object-position: center 25%; }
+
+
+/* ============================================
+   VALENCIA.HTML — ВАЛЕНСИЯ
+   ============================================ */
+
+/* Фон hero — hero-main.jpg (Вика машет рукой) */
+/* Задаётся через .city-hero-bg img выше */
+
+/* Галерея — hero-main.jpg высокое (Валенсия, пальмы) */
+.city-gallery-section .city-masonry .city-photo:nth-child(1) img { object-position: center 30%; }
+
+/* Галерея — padel.jpg (падл, боевая стойка) */
+.city-gallery-section .city-masonry .city-photo:nth-child(2) img { object-position: center 30%; }
+
+/* Галерея — valencia-2.jpg (Саграда Фамилия) */
+.city-gallery-section .city-masonry .city-photo:nth-child(3) img { object-position: center 20%; }
+
+/* Галерея — valencia-1.jpg (улица Барселоны) */
+.city-gallery-section .city-masonry .city-photo:nth-child(4) img { object-position: center 30%; }
+
+
+/* ============================================
+   FLOKI.HTML — ФЛОКИ
+   ============================================ */
+
+/* Фон hero — floki-1.jpg (Флоки с нарциссами) */
+.floki-hero-bg img { object-position: center 30%; }
+
+/* Карточка 1 — floki-1.jpg (с нарциссами) */
+.floki-dossier-grid .floki-card:nth-child(1) .floki-card-photo img { object-position: center 30%; }
+
+/* Карточка 2 — floki-3.jpg (лежит, язык) */
+.floki-dossier-grid .floki-card:nth-child(2) .floki-card-photo img { object-position: center center; }
+
+/* Карточка 3 — floki-2.jpg (спиной на причале) */
+.floki-dossier-grid .floki-card:nth-child(3) .floki-card-photo img { object-position: center 30%; }
+
+/* Карточка 4 — floki-vika.jpg (Вика держит щенка) */
+.floki-dossier-grid .floki-card:nth-child(4) .floki-card-photo img { object-position: center 30%; }
+
+
+/* ============================================
+   FINALE.HTML — ФИНАЛ
+   ============================================ */
+
+/* Большое фото вверху страницы — family-1.jpg (трое, язык) */
+.finale-photo-top img { object-position: center 20%; }
+
+/* Коллаж — siblings-moped.jpg (мопед, детство) */
+.finale-collage-grid .fc-item:nth-child(1) img { object-position: top center; }
+
+/* Коллаж — wedding-main.jpg (невеста) */
+.finale-collage-grid .fc-item:nth-child(2) img { object-position: top center; }
+
+/* Коллаж — hero-main.jpg (Вика в Валенсии) */
+.finale-collage-grid .fc-item:nth-child(3) img { object-position: top center; }
+
+/* Коллаж — lyuba-vika.jpg (зеркальное селфи) */
+.finale-collage-grid .fc-item:nth-child(4) img { object-position: center 30%; }
+
+/* Коллаж — floki-1.jpg (Флоки с цветами) */
+.finale-collage-grid .fc-item:nth-child(5) img { object-position: center 30%; }
+
+/* Большое финальное фото — family-1.jpg */
+.finale-closing-photo img { object-position: center 30%; }
+
+.finale-closing-photo {
+  height: 800px;
+}
+
+.finale-closing-photo img {
+  object-fit: contain;
+  object-position: center !important;
+  transform: scale(0.85);
+  background: #1A1618;
+}
+
+

@@ -1,0 +1,156 @@
+/* ============================================
+   FLOKI.CSS
+   ============================================ */
+
+.floki-hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-4xl) var(--page-padding);
+  padding-top: 120px;
+}
+
+.floki-hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.floki-hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: saturate(0.4) brightness(0.3);
+}
+
+.floki-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(12,10,11,0.4) 0%, rgba(12,10,11,0.9) 80%);
+}
+
+.floki-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: fadeInUp 0.9s var(--ease-out) 0.1s both;
+}
+
+.floki-hero-title {
+  font-size: clamp(80px, 20vw, 220px);
+  line-height: 0.85;
+  color: var(--white);
+  margin-bottom: var(--space-xl);
+}
+
+.floki-hero-subtitle {
+  font-size: clamp(20px, 3.5vw, 40px);
+  color: var(--white-dim);
+  line-height: 1.5;
+}
+
+/* ДОСЬЕ */
+.floki-dossier {
+  padding: var(--space-4xl) var(--page-padding);
+  background: var(--black);
+  border-top: 1px solid var(--black-border);
+}
+
+.floki-dossier-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.floki-dossier-header {
+  margin-bottom: var(--space-3xl);
+}
+
+.floki-dossier-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--col-gap);
+}
+
+.floki-card {
+  background: var(--black-card);
+  border: 1px solid var(--black-border);
+  overflow: hidden;
+  transition: border-color var(--duration-mid), transform var(--duration-mid), box-shadow var(--duration-mid);
+}
+
+.floki-card:hover {
+  border-color: var(--rose);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(200,68,90,0.15);
+}
+
+.floki-card-photo {
+  height: clamp(200px, 30vw, 320px);
+  overflow: hidden;
+}
+
+.floki-card-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.8);
+  transition: transform var(--duration-slow) var(--ease-out), filter var(--duration-slow);
+}
+
+.floki-card:hover .floki-card-photo img {
+  transform: scale(1.05);
+  filter: saturate(1);
+}
+
+.floki-card-text {
+  padding: var(--space-xl);
+}
+
+.floki-card-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-sm);
+}
+
+.floki-card-desc {
+  font-size: var(--text-sm);
+  color: var(--white-dim);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ЦИТАТА */
+.floki-quote {
+  padding: var(--space-4xl) var(--page-padding);
+  background: var(--black-soft);
+  border-top: 1px solid var(--black-border);
+}
+
+.floki-quote-inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.floki-quote-icon {
+  font-size: 48px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* АДАПТИВНОСТЬ */
+@media (max-width: 768px) {
+  .floki-dossier-grid {
+    grid-template-columns: 1fr;
+  }
+  .floki-card-photo {
+    height: 240px;
+  }
+}

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="uk">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="З днем народження, Віко! 32 роки — і жодного нудного дня." name="description"/>
+<title>Вікторія — З днем народження</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="styles/variables.css" rel="stylesheet"/>
+<link href="styles/reset.css" rel="stylesheet"/>
+<link href="styles/base.css" rel="stylesheet"/>
+<link href="styles/animations.css" rel="stylesheet"/>
+<link href="styles/index.css" rel="stylesheet"/>
+<link href="styles/photo-fix.css" rel="stylesheet"/>
+<link href="styles/premium-enhancements.css" rel="stylesheet"/>
+<!-- Open Graph — превью при отправке ссылки -->
+<meta content="website" property="og:type"/>
+<meta content="Happy Birthday! 🖤" property="og:title"/>
+<meta content="Maksym &amp; Lyuba" property="og:description"/>
+<meta content="og-image.jpg" property="og:image"/>
+<meta content="1080" property="og:image:width"/>
+<meta content="1350" property="og:image:height"/>
+<!-- WhatsApp / Telegram -->
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Happy Birthday! 🖤" name="twitter:title"/>
+<meta content="Maksym &amp; Lyuba" name="twitter:description"/>
+<meta content="og-image.jpg" name="twitter:image"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/></head>
+<body>
+<!-- Курсор -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<!-- Overlay для переходов -->
+<div id="page-overlay" style="position:fixed;inset:0;background:var(--black);z-index:999;pointer-events:none;"></div>
+<!-- ======================================
+       ЗАГРУЗЧИК
+  ======================================= -->
+<div class="loader" id="loader">
+<div class="loader-inner">
+<div class="loader-name">
+<span class="loader-name-v">В</span><span>ікторія</span>
+</div>
+<div class="loader-counter-wrap">
+<span class="loader-counter">0</span>
+<span class="loader-percent">%</span>
+</div>
+<div class="loader-bar">
+<div class="loader-line"></div>
+</div>
+<p class="loader-hint">завантажуємо 32 роки абсолютно незабутнього</p>
+</div>
+</div>
+<!-- ======================================
+       НАВИГАЦИЯ
+  ======================================= -->
+<nav class="site-nav" id="siteNav">
+<a class="nav-logo" href="index.html">Вік<span>а</span></a>
+<div class="nav-links">
+<a class="nav-link" href="pages/childhood.html">Дитинство</a>
+<a class="nav-link" href="pages/odessa.html">Одеса</a>
+<a class="nav-link" href="pages/bali.html">Балі</a>
+<a class="nav-link" href="pages/valencia.html">Валенсія</a>
+<a class="nav-link" href="pages/floki.html">Флокі</a>
+<a class="nav-link" href="pages/game.html">Гра</a>
+<a class="nav-link btn btn-primary" href="pages/finale.html" style="padding:10px 20px">Послання 🖤</a>
+</div>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Відкрити меню" class="nav-burger" id="navBurger" type="button">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<!-- Мобильное меню -->
+<div aria-hidden="true" class="mobile-menu" id="mobileMenu">
+<a class="nav-link" href="pages/childhood.html">Дитинство</a>
+<a class="nav-link" href="pages/odessa.html">Одеса</a>
+<a class="nav-link" href="pages/bali.html">Балі</a>
+<a class="nav-link" href="pages/valencia.html">Валенсія</a>
+<a class="nav-link" href="pages/floki.html">Флокі</a>
+<a class="nav-link" href="pages/game.html">Гра</a>
+<a class="nav-link" href="pages/finale.html">Послання 🖤</a>
+</div>
+<!-- ======================================
+       БЕГУЩАЯ СТРОКА
+  ======================================= -->
+<div class="marquee-bar hero-marquee" id="heroMarquee">
+<div class="marquee-inner">
+<span class="marquee-item">З днем народження</span>
+<span class="marquee-item marquee-dot">✦</span>
+<span class="marquee-item">22 червня 1994</span>
+<span class="marquee-item marquee-dot">✦</span>
+<span class="marquee-item">09:30</span>
+<span class="marquee-item marquee-dot">✦</span>
+<span class="marquee-item">18+ рочків</span>
+<span class="marquee-item marquee-dot">✦</span>
+<span class="marquee-item">Одеса → Валенсія</span>
+<span class="marquee-item marquee-dot">✦</span>
+<span class="marquee-item">Любимо тебе</span>
+<span class="marquee-item marquee-dot">✦</span>
+<!-- дублируем для бесшовного скролла -->
+<span class="marquee-item">З днем народження</span>
+<span class="marquee-item marquee-dot">✦</span>
+<span class="marquee-item">22 червня 1994</span>
+<span class="marquee-item marquee-dot">✦</span>
+<span class="marquee-item">09:30</span>
+<span class="marquee-item marquee-dot">✦</span>
+<span class="marquee-item">18+ рочків</span>
+<span class="marquee-item marquee-dot">✦</span>
+<span class="marquee-item">Одеса → Валенсія</span>
+<span class="marquee-item marquee-dot">✦</span>
+<span class="marquee-item">Любимо тебе</span>
+<span class="marquee-item marquee-dot">✦</span>
+</div>
+</div>
+<!-- ======================================
+       HERO — главный экран
+  ======================================= -->
+<section class="hero" id="hero">
+<!-- Фоновые фото -->
+<div class="hero-bg-photos">
+<div class="hero-bg-photo hero-bg-1">
+<img alt="Віка у Валенсії" data-fallback="hide" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/hero-main.jpg" width="1030"/>
+</div>
+<div class="hero-bg-photo hero-bg-2">
+<img alt="Весілля на Балі" data-fallback="hide" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/wedding-main.jpg" width="854"/>
+</div>
+<div class="hero-bg-photo hero-bg-3">
+<img alt="Віка на Балі" data-fallback="hide" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/bali-hero.jpg" width="1025"/>
+</div>
+</div>
+<div class="hero-bg-overlay"></div>
+<!-- Декоративные элементы -->
+<div class="hero-deco-star hero-deco-1 anim-rotateSlow">✦</div>
+<div class="hero-deco-star hero-deco-2 anim-rotateReverse">✦</div>
+<div class="hero-deco-star hero-deco-3 anim-rotateSlow">◆</div>
+<!-- Главный контент -->
+<div class="hero-content" id="heroContent">
+<!-- Лейбл -->
+<div class="hero-eyebrow" id="heroEyebrow">
+<span class="t-label-rose">✦ 22 червня 1994 ✦</span>
+</div>
+<!-- Имя -->
+<h1 class="hero-title" id="heroTitle">
+<span class="hero-title-line hero-title-line-1">Вік</span><span class="hero-title-line hero-title-line-2">торі</span><span class="hero-title-line hero-title-line-3">я</span>
+</h1>
+<!-- Подзаголовок -->
+<div class="hero-subtitle" id="heroSubtitle">
+<span class="hero-subtitle-text">Душа компанії</span>
+<span class="hero-subtitle-dot">·</span>
+<span class="hero-subtitle-text">Авантюристка</span>
+<span class="hero-subtitle-dot">·</span>
+<span class="hero-subtitle-text">Гроза колонок</span>
+<span class="hero-subtitle-dot">·</span>
+<span class="hero-subtitle-text">Наша рідна людина</span>
+</div>
+<!-- Маршрут -->
+<div class="hero-route" id="heroRoute">
+<a class="route-stop route-odessa" href="pages/odessa.html">
+<span class="route-dot"></span>
+<span class="route-name">Одеса</span>
+</a>
+<div class="route-line"></div>
+<a class="route-stop route-bali" href="pages/bali.html">
+<span class="route-dot"></span>
+<span class="route-name">Балі</span>
+</a>
+<div class="route-line"></div>
+<a class="route-stop route-valencia" href="pages/valencia.html">
+<span class="route-dot"></span>
+<span class="route-name">Валенсія</span>
+</a>
+</div>
+<!-- CTA -->
+<div class="hero-cta" id="heroCta">
+<a class="btn btn-primary" href="pages/childhood.html">
+          Почати подорож
+          <svg fill="none" height="16" viewbox="0 0 16 16" width="16">
+<path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+</svg>
+</a>
+<!--<a href="pages/finale.html" class="btn btn-outline">
+          Наше послання
+        </a>-->
+</div>
+</div>
+<!-- Правая часть — стопка фото -->
+<div class="hero-photos" id="heroPhotos">
+<div class="hero-photo hero-photo-1">
+<img alt="Віка у Валенсії" data-fallback="parent-no-photo" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/hero-main.jpg" width="1030"/>
+<div class="photo-label">Валенсія</div>
+</div>
+<div class="hero-photo hero-photo-2">
+<img alt="Весілля на Балі" data-fallback="parent-no-photo" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/wedding-main.jpg" width="854"/>
+<div class="photo-label">Балі</div>
+</div>
+<div class="hero-photo hero-photo-3">
+<img alt="Флокі" data-fallback="parent-no-photo" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/floki-1.jpg" width="796"/>
+<div class="photo-label">Флокі чекає</div>
+</div>
+</div>
+<!-- Бейдж с датой -->
+<div class="hero-badge" id="heroBadge">
+<svg class="badge-ring" viewbox="0 0 120 120">
+<defs>
+<path d="M 60,60 m -42,0 a 42,42 0 1,1 84,0 a 42,42 0 1,1 -84,0" id="badgePath"></path>
+</defs>
+<text fill="rgba(201,168,76,0.7)" font-family="'DM Mono', monospace" font-size="9.5" letter-spacing="3.5">
+<textpath href="#badgePath">
+            З ДНЕМ НАРОДЖЕННЯ · 22 ЧЕРВНЯ · 
+          </textpath>
+</text>
+</svg>
+<div class="badge-center">
+<span class="badge-num">32</span>
+<span class="badge-sub">рочки</span>
+</div>
+</div>
+<!-- Скрол-индикатор -->
+<div class="scroll-indicator" id="scrollIndicator">
+<div class="scroll-line"></div>
+<span class="t-label">Скрол</span>
+</div>
+</section>
+<!-- ======================================
+       СЕКЦИЯ — ХАРАКТЕР
+  ======================================= -->
+<section class="about-section" id="about">
+<div class="about-inner">
+<div class="about-left reveal-left">
+<div class="section-eyebrow">
+<span class="t-label-rose">Хто така Віка</span>
+</div>
+<h2 class="about-title t-display">
+          Рідкісне поєднання доброти,<br/>
+<em>упертості,</em><br/>
+          гумору<br/>і абсолютної непередбачуваності
+        </h2>
+<p class="about-desc t-body">
+          Є люди, які просто заходять у кімнату — і там одразу стає гучніше, тепліше й якось цікавіше. 
+		  Віка саме така. Вона може обійняти так, що всередині все відпустить, 
+		  а за хвилину чесно пояснити, що ти зробив не так.
+        </p>
+<a class="btn btn-outline" href="pages/childhood.html" style="margin-top:var(--space-xl)">
+          Читати історію →
+        </a>
+</div>
+<div class="about-right">
+<div class="traits-grid">
+<div class="trait-card reveal delay-1" data-hover="">
+<div class="trait-icon">✂️</div>
+<div class="trait-title">Стилістка з дитинства</div>
+<div class="trait-desc">Першим клієнтом став Максим: йому було десять, їй — чотири. Він спав, ножиці були в неї. Далі все сталося само.</div>
+</div>
+<div class="trait-card reveal delay-2" data-hover="">
+<div class="trait-icon">🌍</div>
+<div class="trait-title">Непосида</div>
+<div class="trait-desc">Одеса одного разу стала затісною. Потім і Балі. Валенсія ще тримається. Поки що.</div>
+</div>
+<div class="trait-card reveal delay-3" data-hover="">
+<div class="trait-icon">🎵</div>
+<div class="trait-title">DJ Віка</div>
+<div class="trait-desc">Якщо вона дісталася до колонки — готуйтеся: «Воровайки» на репіті, техніка під охороною, гості в легкому культурному шоці.</div>
+</div>
+<div class="trait-card reveal delay-4" data-hover="">
+<div class="trait-icon">🖤</div>
+<div class="trait-title">Говорить прямо</div>
+<div class="trait-desc">Скаже все, що думає. Прямо, чесно і по суті. У Віки це не грубість — це така форма турботи.</div>
+</div>
+<div class="trait-card reveal delay-5" data-hover="">
+<div class="trait-icon">💐</div>
+<div class="trait-title">Квіткова маніячка</div>
+<div class="trait-desc">Троянди, півонії, ромашки — неважливо. Головне, щоб багато і просто зараз.</div>
+</div>
+<div class="trait-card reveal delay-6" data-hover="">
+<div class="trait-icon">🐾</div>
+<div class="trait-title">Флокі</div>
+<div class="trait-desc">Єдиний, хто іноді робить вигляд, що слухається її.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======================================
+       СЕКЦИЯ — ПУТЬ (mini timeline)
+  ======================================= -->
+<section class="path-section" id="path">
+<div class="path-inner">
+<div class="section-eyebrow reveal">
+<span class="t-label-rose">Шлях</span>
+</div>
+<h2 class="path-title t-display reveal delay-1">
+        Одне життя.<br/><em>Три міста.</em>
+</h2>
+<div class="path-cities">
+<a class="path-city reveal delay-2" data-hover="" href="pages/odessa.html">
+<div class="path-city-num t-display">01</div>
+<div class="path-city-photo">
+<img alt="Одеса" data-fallback="hide" decoding="async" height="1280" loading="lazy" src="assets/images/odessa-1.jpg" width="1024"/>
+</div>
+<div class="path-city-info">
+<div class="path-city-tag" style="color:var(--odessa);border-color:var(--odessa)">Одеса</div>
+<h3 class="path-city-title">Там, де<br/>все почалося</h3>
+<!--<p class="path-city-desc">Дитинство, мопед Yamaha, первые стрижки и море.</p> -->
+</div>
+<div class="path-city-arrow">→</div>
+</a>
+<a class="path-city reveal delay-3" data-hover="" href="pages/bali.html">
+<div class="path-city-num t-display">02</div>
+<div class="path-city-photo">
+<img alt="Балі" data-fallback="hide" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/bali-hero.jpg" width="1025"/>
+</div>
+<div class="path-city-info">
+<div class="path-city-tag" style="color:var(--bali);border-color:var(--bali)">Балі</div>
+<h3 class="path-city-title">Острів,<br/>що змінив усе</h3>
+<!-- <p class="path-city-desc">Тропики, вулканы, свадьба на пляже и новая жизнь.</p> -->
+</div>
+<div class="path-city-arrow">→</div>
+</a>
+<a class="path-city reveal delay-4" data-hover="" href="pages/valencia.html">
+<div class="path-city-num t-display">03</div>
+<div class="path-city-photo">
+<img alt="Валенсія" data-fallback="hide" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/hero-main1.jpg" width="720"/>
+</div>
+<div class="path-city-info">
+<div class="path-city-tag" style="color:var(--valencia);border-color:var(--valencia)">Валенсія</div>
+<h3 class="path-city-title">Дім там,<br/>де серце</h3>
+<!-- <p class="path-city-desc">Падл, испанское солнце и новые горизонты.</p> -->
+</div>
+<div class="path-city-arrow">→</div>
+</a>
+</div>
+</div>
+</section>
+<!-- ======================================
+       СЕКЦИЯ — ГРА (тизер)
+  ======================================= -->
+<section class="game-teaser" id="gameTeaser">
+<div class="game-teaser-inner">
+<div class="game-teaser-content reveal">
+<div class="t-label-rose" style="margin-bottom:var(--space-md)">Інтерактив</div>
+<h2 class="game-teaser-title t-display">
+          Наскільки добре<br/>
+          ти знаєш <em>Віку?</em>
+</h2>
+<p class="t-body" style="margin:var(--space-lg) 0 var(--space-xl)">
+          Два випробування. Вгадай правильну відповідь.
+          Допоможи Флокі дістатися до колонки.
+        </p>
+<a class="btn btn-primary" href="pages/game.html">
+          Зіграти
+          <svg fill="none" height="16" viewbox="0 0 16 16" width="16">
+<polygon fill="currentColor" points="5,2 14,8 5,14"></polygon>
+</svg>
+</a>
+</div>
+<div class="game-teaser-visual reveal-right delay-2">
+<div class="game-preview-card">
+<div class="game-preview-q">Віка дісталася до колонки. Що вона увімкнула?</div>
+<div class="game-preview-options">
+<div class="game-preview-opt wrong">Rammstein</div>
+<div class="game-preview-opt correct">Воровайки 🎶</div>
+<div class="game-preview-opt wrong">Сердючку</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======================================
+       СЕКЦИЯ — ФИНАЛЬНЫЙ ПРИЗЫВ
+  ======================================= -->
+<section class="final-cta-section" id="finalCta">
+<div class="final-cta-inner">
+<div class="final-cta-photo-strip">
+<div class="strip-item">
+<img alt="Сімейне фото" data-fallback="hide" decoding="async" height="1280" loading="lazy" src="assets/images/family-1.jpg" width="961"/>
+</div>
+<div class="strip-item">
+<img alt="Флокі" data-fallback="hide" decoding="async" height="1280" loading="lazy" src="assets/images/floki-1.jpg" width="796"/>
+</div>
+<div class="strip-item">
+<img alt="Віка на Балі" data-fallback="hide" decoding="async" fetchpriority="high" height="1280" loading="eager" src="assets/images/bali-hero.jpg" width="1025"/>
+</div>
+<div class="strip-item">
+<img alt="Весільний поцілунок" data-fallback="hide" decoding="async" height="1280" loading="lazy" src="assets/images/wedding-kiss.jpg" width="960"/>
+</div>
+<div class="strip-item">
+<img alt="Одеса" data-fallback="hide" decoding="async" height="1280" loading="lazy" src="assets/images/odessa-1.jpg" width="1024"/>
+</div>
+</div>
+<div class="final-cta-text reveal">
+<p class="final-cta-quote t-display-italic">
+          «Любити тебе легко.<br/>
+<span style="color:var(--rose)">Відпустити до колонки</span> — зовсім інша історія.»
+        </p>
+<p class="t-label" style="margin:var(--space-xl) 0 var(--space-lg)">
+          — Максим &amp; Люба
+        </p>
+<a class="btn btn-primary" href="pages/finale.html">
+          Читати наше послання
+        </a>
+</div>
+</div>
+</section>
+<!-- ======================================
+       ФУТЕР
+  ======================================= -->
+<footer class="site-footer">
+<div class="footer-inner">
+<div class="footer-logo">Вік<span>а</span></div>
+<div class="footer-date">22 · 06 · 2026</div>
+<div class="footer-heart">made with 🖤 by Максим &amp; Люба</div>
+</div>
+</footer>
+<script src="scripts/transitions.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/index.js"></script>
+<script src="scripts/premium-enhancements.js"></script>
+</body>
+</html>

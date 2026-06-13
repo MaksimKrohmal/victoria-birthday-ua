@@ -1,0 +1,156 @@
+/* ============================================
+   BALI.CSS
+   ============================================ */
+
+.bali-landscapes {
+  border-top: 1px solid var(--black-border);
+  background: var(--black-soft);
+}
+
+.bali-landscapes-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: clamp(180px, 28vw, 320px);
+}
+
+.bali-land {
+  overflow: hidden;
+  position: relative;
+}
+
+.bali-land img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  filter: saturate(0.7) brightness(0.85);
+  transition: filter var(--duration-slow), transform var(--duration-slow);
+}
+
+.bali-land:hover img {
+  filter: saturate(1) brightness(1);
+  transform: scale(1.05);
+}
+
+/* СВАДЬБА */
+.bali-wedding {
+  padding: var(--space-4xl) var(--page-padding);
+  background: var(--black-soft);
+  border-top: 1px solid var(--black-border);
+}
+
+.bali-wedding-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: clamp(40px, 8vw, 100px);
+  align-items: center;
+}
+
+.bali-wedding-title {
+  font-size: clamp(40px, 6vw, 76px);
+  margin-bottom: var(--space-xl);
+  line-height: 0.9;
+}
+
+.bali-wedding-title em {
+  color: var(--rose);
+  font-style: italic;
+}
+
+.bali-wedding-photos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.bali-wedding-main {
+  height: clamp(300px, 45vw, 480px);
+  overflow: hidden;
+}
+
+.bali-wedding-main img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: saturate(0.85);
+  transition: filter var(--duration-slow), transform var(--duration-slow);
+}
+
+.bali-wedding-main:hover img {
+  filter: saturate(1);
+  transform: scale(1.03);
+}
+
+.bali-wedding-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  height: 120px;
+}
+
+.bali-wed-small {
+  overflow: hidden;
+}
+
+.bali-wed-small img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: saturate(0.7);
+  transition: filter var(--duration-mid), transform var(--duration-mid);
+}
+
+.bali-wed-small:hover img {
+  filter: saturate(1);
+  transform: scale(1.08);
+}
+
+/* ПОЛНОЭКРАННОЕ ФОТО */
+.bali-fullscreen {
+  position: relative;
+  height: clamp(400px, 70vh, 700px);
+  overflow: hidden;
+}
+
+.bali-fs-photo {
+  width: 100%;
+  height: 100%;
+}
+
+.bali-fs-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: saturate(0.6) brightness(0.5);
+}
+
+.bali-fs-caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--page-padding);
+  text-align: center;
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .bali-wedding-inner {
+    grid-template-columns: 1fr;
+  }
+  .bali-landscapes-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bali-landscapes-strip {
+    grid-template-columns: 1fr 1fr;
+    height: clamp(240px, 50vw, 320px);
+  }
+  .bali-wedding-grid {
+    grid-template-columns: repeat(2, 1fr);
+    height: 200px;
+  }
+}
